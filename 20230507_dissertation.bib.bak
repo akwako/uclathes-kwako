@@ -646,4 +646,27 @@
   author    = {Loukina, Anastassia and Yoon, Su-Youn},
   booktitle = {Automated Speaking Assessment},
   publisher = {Routledge},
-  title     = {Scoring and filtering models for automated spee
+  title     = {Scoring and filtering models for automated speech scoring},
+  year      = {2019},
+  pages     = {75--98},
+}
+
+@InCollection{qian2019automatic,
+  author    = {Qian, Yao and Lange, Patrick and Evanini, Keelan},
+  booktitle = {Automated Speaking Assessment},
+  publisher = {Routledge},
+  title     = {Automatic speech recognition for automated speech scoring},
+  year      = {2019},
+  pages     = {61--74},
+}
+
+@InProceedings{chen2018end,
+  author       = {Chen, Lei and Tao, Jidong and Ghaffarzadegan, Shabnam and Qian, Yao},
+  booktitle    = {2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  title        = {End-to-end neural network based automated speech scoring},
+  year         = {2018},
+  organization = {IEEE},
+  pages        = {6234--6238},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
