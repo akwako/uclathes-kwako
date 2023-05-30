@@ -387,7 +387,7 @@
   shorttitle = {Pytorch},
 }
 
-@Report{python_software_foundation_python_2022,
+@Report{python2022,
   author  = {{Python Software Foundation}},
   title   = {The Python Language Reference},
   url     = {https://docs.python.org/3.8/reference/},
@@ -1087,6 +1087,21 @@
   title     = {CMU ARCTIC Databases for Speech Synthesis},
   year      = {2003},
   publisher = {Carnegie Mellon University},
+}
+
+@InProceedings{kwako2022using,
+  author    = {Kwako, Alexander and Wan, Yixin and Zhao, Jieyu and Chang, Kai-Wei and Cai, Li and Hansen, Mark},
+  booktitle = {Proceedings of the 17th Workshop on Innovative Use of NLP for Building Educational Applications (BEA 2022)},
+  title     = {Using Item Response Theory to Measure Gender and Racial Bias of a BERT-based Automated English Speech Assessment System},
+  year      = {2022},
+  pages     = {1--7},
+}
+
+@Conference{steedle2023,
+  author       = {Jeffrey Steedle and Shalini Kapoor and Shichao Wang},
+  title        = {What’s the DIF? Item Properties Associated with DIF on the ACT},
+  year         = {2023},
+  organization = {National Council on Measurement in Education},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

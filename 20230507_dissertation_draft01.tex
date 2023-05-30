@@ -17,6 +17,7 @@
 \usepackage{booktabs}
 \newlength{\wdth}
 \newcommand{\strike}[1]{\settowidth{\wdth}{#1}\rlap{\rule[.5ex]{\wdth}{.4pt}}#1}
+\newcommand{\sbN}{\scalebox{1.25}{$N$}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,7 +268,7 @@ This study focuses on a specific type of bias in English speaking proficiency kn
 
 In educational assessment, a test item is said to exhibit differential item functioning (DIF) when “equally able (or proficient) individuals, from different groups, do not have equal probabilities of answering the item correctly” \citep[][p. 4]{angoff1993}. By definition, DIF is not a measure of first-order group differences (or mean group differences), which is sometimes referred to as impact. Rather, DIF conditions on overall (and ideally unbiased) proficiency. In other words, DIF occurs when examinees who should receive similar scores (based on their performance on other test items) receive different scores on a specific item under review. In DIF terminology, overall proficiency is referred to as the matching criterion, the majority group is referred to as the reference group and the minority group is referred to as the focal group.
 
-For instance, in college admissions tests of reading comprehension, males (the reference group) tend to score higher on science-related passages, whereas females (the focal group) tend to score higher on humanities-related passages, conditional on examinees’ overall language proficiency (the matching criterion; Steedle et al., 2023). 
+For instance, in college admissions tests of reading comprehension, males (the reference group) tend to score higher on science-related passages, whereas females (the focal group) tend to score higher on humanities-related passages, conditional on examinees’ overall language proficiency \citep[the matching criterion;][]{steedle2023}. 
 
 There are many possible causes of DIF. The above example highlights the possibility of confounding variables \citep[e.g. males tend to major in STEM at a higher rate;][]{sloane2021college}. One of the central concerns of this paper is that DIF might arise from implicit bias in human raters—that is, human raters might be unconsciously influenced by phonic features in examinees’ voices. Also pertinent to this study, DIF could be caused by discrepancies in automated transcription of speech, or socio-cultural or cognitive differences rooted in examinees’ gender or L1 backgrounds. Practitioners have lamented that determining causes of DIF is challenging and often yield inconclusive results \citep{zumbo2007}. 
 
@@ -381,7 +382,7 @@ From the sampling frame, we sampled 15,000 students (8,377 from grade band 2–3
 
 \begin{table*}[htbp]
 \centering
-\caption{\label{smp_dscr} \raggedright Sample descriptive statistics in aggregate ("All") and disaggregated by gender and L1.}
+\caption{\label{smp_dscr} \raggedright Sample descriptive statistics, in aggregate and disaggregated by gender and L1.}
 % \small  % comment out this line if wanted bigger font size
 \begin{tabular}{lccccccc}
 \toprule
@@ -424,18 +425,18 @@ Speaking items were selected to span a range of response times (i.e., length or 
 \begin{table*}[ht]
 \centering
 \caption{\label{itm_dscr} \raggedright Item descriptive statistics. }
-% \small  % comment out this line if wanted bigger font size
+\small  % comment out this line if wanted bigger font size
 \begin{tabular}{llccccccc}
 \toprule
     & & \multicolumn{3}{c}{\textbf{Grade Band 2-3}} & \multicolumn{1}{c}{ } & \multicolumn{3}{c}{\textbf{Grade Band 9-12}} \\
     \cline{3-5}
     \cline{7-9}
      % \textbf{Item #} & \textbf{Length} & \textbf{Num. Categories} & \textbf{Avg. Seconds} & \textbf{Avg. Words} & & \textbf{Num. Categories} & \textbf{Avg. Seconds} \\
-     \textbf{Item \#} & \textbf{Length} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Num. of} \\ \textbf{categories}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{seconds}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{words}} & & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Num. of} \\ \textbf{categories}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{seconds}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{words}} \\
+     \multicolumn{1}{p{1.5cm}}{\raggedright \textbf{} \\ \textbf{Item \#}} & \multicolumn{1}{p{1.5cm}}{\raggedright \textbf{} \\ \textbf{Length}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Num. of} \\ \textbf{Categories}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} & & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Num. of} \\ \textbf{Categories}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} \\
     \midrule
-    Item 1 & short & 3 & 6.4 (4.9) & 6.0 (6.5) & & 4 & 8.3 (5.0) & 11.5 (7.1) \\
-    Item 2 & medium & 5 & 17.2 (13.3) & 25.1 (23.2) & & 6 & 14.9 (9.1) & 22.8 (16.7) \\
-    Item 3 & long & 6 & 36.9 (23.1) & 51.1 (35.0) & & 5* & 34.7 (18.9) & 65.0 (38.4) \\
+    Item 1 & Short & 3 & 6.4 (4.9) & 6.0 (6.5) & & 4 & 8.3 (5.0) & 11.5 (7.1) \\
+    Item 2 & Medium & 5 & 17.2 (13.3) & 25.1 (23.2) & & 6 & 14.9 (9.1) & 22.8 (16.7) \\
+    Item 3 & Long & 6 & 36.9 (23.1) & 51.1 (35.0) & & 5* & 34.7 (18.9) & 65.0 (38.4) \\
     \bottomrule
     \end{tabular}
 {\raggedright \newline \newline Note: Item 3 for grade-band 9–12 was re-scaled from a 6-point scale to a 5-point scale. This change was made due to the fact that one group of respondents (Hindi) did not receive any 1s. Combining 1s with 2s helped to improve model convergence. \par}
@@ -453,19 +454,32 @@ Automated transcripts were generated using Amazon Web Services. Transcript reque
 
 Text was standardized in order to remove certain stylistic differences between automated transcription services. Following the example of \cite{koenecke2020}, standardization included: changing numerals to unhyphenated words (e.g. “forty two” instead of “42”); removing punctuation, with the exception of apostrophes and translatable symbols (e.g. “percent” instead of “\%”); removing expressions of hesitation (such as “um” or “hm”); converting all text to lowercase; and formalizing slang (e.g. replacing “cuz” with “because”).
 
+\subsection{Non-speaking English Proficiency}
+\label{meth_nonspeaking}
+
+Examinees' non-speaking English proficiency was used as the matching criterion in DIF analyses (see Section \ref {meth_dif}). Non-speaking proficiency was inferred from examinees' responses to test items in non-speaking domains (i.e. listening, reading, and writing). Items were modeled using an Item Response Theory (IRT) framework \citep{cai_item_2016}, consistent with modeling choices used in production. One difference, however, was that we modeled non-speaking items as a unidimensional construct because (1) it simplified interpretation of the matching criterion, since we were interested in non-speaking proficiency as a whole rather than individual domains, (2) it yielded smaller margins of error, and (3) model fit was in an acceptable range for both grade bands, based on limited-information fit statistics and Tucker-Lewis (non-normed) fit indices (M2 RMSEA $\leq .03$ and M2 TLI $\geq .96$). 
+
 \section{Differential item functioning (DIF)}
 \label{meth_dif}
 
-As discussed in Section \ref{intro_dif}, DIF occurs when there are group differences, conditional on unbiased proficiency estimates. The unbiased proficiency estimate, $\theta$, is referred to as the \emph{matching criterion}. In this study, the matching criterion is examinees’ non-Speaking English language proficiency, inferred from a unidimensional IRT model. By excluding speaking items, we ensured that estimates of $\theta$ were not contaminated by the same type(s) of bias under examination.
+As discussed in Section \ref{intro_dif}, DIF occurs when there are group differences, conditional on unbiased proficiency estimates. The unbiased proficiency estimate, $\theta$, is referred to as the \emph{matching criterion}. In this study, the matching criterion is examinees' non-Speaking English language proficiency. By excluding speaking items, we ensured that estimates of $\theta$ were not contaminated by the same type(s) of bias under examination. To compare examinees' of similar $\theta$, the sample was divided into ten strata based on which quantile of the standard normal distribution their non-Speaking English proficiency resided.
 
 The majority group is referred to as the \emph{reference group}; and the minority group is referred to as the \emph{focal group}. For gender, the reference group was Male (and the focal group was Female); for L1, the reference group is Spanish (and the nine focal groups are listed in Table \ref{smp_dscr}).
 
 \subsection{DIF effect sizes}
 \label{meth_fx}
 
-As summarized by \cite{michaelides2008}, a common method to evaluate DIF for ordinal items is based on the standardized mean difference (SMD) between reference and focal groups \citep{dorans1986}.\footnote{Instead of using the Mantel test \citep{mantel1963}, our significance tests are based on bootstrap sampling distributions and B-H adjusted $p$-values, described in Sections \ref{meth_boot} and \ref{meth_bh}.} The effect size, $z$, is the ratio of SMD to the standard deviation (pooled between the two groups).\footnote{\cite{ormerod2022automated} refer to the effect size as $z$, a convention we follow.} Intuitively, $z$ represents how much the focal group outperforms the reference group, comparing examinees of similar proficiency,\footnote{Examinees were divided into ten strata based on which quantile of the standard normal distribution their non-Speaking English proficiency resided.} in units of standard deviation.
+As summarized by \cite{michaelides2008}, a common method to evaluate DIF for ordinal items is based on the standardized mean difference (SMD) between reference and focal groups \citep{dorans1986}.\footnote{Instead of using the Mantel test \citep{mantel1963}, our significance tests are based on bootstrap sampling distributions and B-H adjusted $p$-values, described in Sections \ref{meth_boot} and \ref{meth_bh}.} SMD is calculated as follows:
 
-What counts as a large or small effect size is based on a system originally proposed by \citet{zwick1993assessment} and is used by the Educational Testing Service and other educational assessment organizations. Generalizing the system to ordinal items, \citet[][p. 150]{naep2001} designates items as having strong DIF (labeled “CC”) if z is greater than or equal to 0.25. Items have weak DIF (“AA”) if z is less than 0.17. And items have moderate DIF (“BB”) if z is between 0.17 and 0.25.
+$$
+SMD = \sum_j{\frac{\sbN_{F.j}}{\sbN_{F..}}}\frac{\sum\limits_u{\sbN_{Fuj}u}}{\sbN_{F.j}} - \sum_j{\frac{\sbN_{F.j}}{\sbN_{F..}}}\frac{\sum\limits_u{\sbN_{Ruj}u}}{\sbN_{R.j}}
+$$
+
+where $N_{Fuj}$ is the number of examinees in the focal group $F$ who have a non-speaking language proficiency score that puts them in stratum $j$, and who received score $u$ (on the item in question). Multiplying this quantity by the score, $u$, and dividing by the number of examinees in the focal group in stratum $j$, yields the expected score for the focal group. A similar procedure is followed for the reference group. Before taking the difference, the expected scores are weighted by the proportion of examinees in the focal group in stratum $j$. 
+
+The effect size, $z$, is the ratio of SMD to the standard deviation (pooled between the two groups).\footnote{\cite{ormerod2022automated} refer to the effect size as $z$, a convention we follow.} Intuitively, $z$ represents how much the focal group outperforms the reference group, comparing examinees of similar proficiency, in units of standard deviation.
+
+What counts as a large or small effect size is based on a system originally proposed by \citet{zwick1993assessment} and is used by the Educational Testing Service and other educational assessment organizations. Generalizing the system to ordinal items, \citet[][p. 150]{naep2001} designates items as having strong DIF (labeled “CC”) if $z$ is greater than or equal to 0.25. Items have weak DIF (“AA”) if $z$ is less than 0.17. And items have moderate DIF (“BB”) if $z$ is between 0.17 and 0.25.
 
 \subsubsection{Absolute effect size}
 
@@ -473,7 +487,7 @@ For certain research questions, the primary interest is not in determining which
 
 \subsubsection{Differences between effect sizes}
 
-We also compute differences in effect sizes (i.e. between human and automated scores, between items, and between grades). In each of these comparisons, we are interested not in DIF itself, but in first-order differences of DIF. We refer to these quantities as $\Delta z$ and $\Delta z_{abs}$. In research questions 2–3, we also examine second order differences, $\Delta \Delta z_{abs} = |\Delta z_{abs,i} - \Delta z_{abs,j}|$.
+We also computed differences in effect sizes (i.e. differences in DIF between human and automated scores, differences between items, and differences between grades). In each of these comparisons, we were interested not in DIF itself, but in first-order differences of DIF. We refer to these quantities as $\Delta z = z_i - z_j$, and $\Delta z_{abs} = |z_{abs,i} - z_{abs,j}|$, where $i$ and $j$ represent two different effect sizes (e.g. DIF based on human vs. BERT scores, or DIF of item 1 vs. item 2). In research questions 2–3, we also examine second order differences, $\Delta \Delta z_{abs} = |\Delta z_{abs,i} - \Delta z_{abs,j}|$.
 
 \subsection{Aggregate DIF metrics}
 
@@ -485,7 +499,7 @@ To evaluate DIF across items, we computed $z$ based on examinees’ summed score
 
 \subsubsection{Factor DIF}
 
-Analyses of DIF are usually localized to pairwise comparisons involving one focal group and the reference group. However, for factors containing more than one focal group, however, we are interested in evaluating DIF for the factor as a whole. To evaluate DIF for the entire factor, we take an unweighted stratified mean of all pairwise comparisons, $\bar{z} = \frac{1}{p} \sum{z_i}$, and $\bar{z}_{abs} = \frac{1}{p} \sum{z_{abs,i}}$, where $p$ is the number of focal groups. Note that in the case where there is 1 focal group, $\bar{z}$ and $\bar{z}_{abs}$ reduce to $z$ and $z_{abs}$, respectively.
+Analyses of DIF are usually localized to pairwise comparisons involving one focal group and the reference group. However, for factors containing more than one focal group, however, we are interested in evaluating DIF for the factor as a whole. To evaluate DIF for the entire factor, we take an unweighted stratified mean of all pairwise comparisons, $\bar{z}_{abs} = \frac{1}{p} \sum{z_{abs,i}}$, where $p$ is the number of focal groups. Note that in the case where there is 1 focal group, $\bar{z}_{abs}$ reduces to $z_{abs}$.
 
 \section{Statistical Estimation}
 \label{meth_boot}
@@ -561,30 +575,29 @@ There were group differences in students' overall English language proficiency (
 \begin{table*}[htbp]
 \centering
 \caption{\label{wer_dscr} \raggedright Descriptives statistics of examinees subsampled for Study 1, overall and disaggregated by gender and L1.}
-% \small  % comment out this line if wanted bigger font size
+\small  % comment out this line if wanted bigger font size
 \begin{tabular}{lccccccccc}
 \toprule
     & \multicolumn{4}{c}{\textbf{Grade Band 2-3}} & \multicolumn{1}{c}{ } & \multicolumn{4}{c}{\textbf{Grade Band 9-12}} \\
     \cline{2-5}
     \cline{7-10}
-     & \textbf{n} & \textbf{Avg. Sec.} & \textbf{Avg. Words} & \textbf{Avg. Proficiency} & & \textbf{n} & \textbf{Avg. Sec.} & \textbf{Avg. Words} & \textbf{Avg. Proficiency}  \\
+     & \multicolumn{1}{p{.75cm}}{\centering \textbf{} \\ \textbf{n}} & \multicolumn{1}{p{1cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} & \multicolumn{1}{p{1cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Proficiency}} & & \multicolumn{1}{p{.75cm}}{\centering \textbf{} \\ \textbf{n}} & \multicolumn{1}{p{1cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} & \multicolumn{1}{p{1cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Avg.} \\ \textbf{Proficiency}} \\
     \midrule
-Overall & 500 & 23.9 (17.0) & 32 (29) & 0.03 (1.11) & & 500 & 24.4 (13.3) & 37 (23) & 0.04 (1.06) \\
-Gender &  &  &  &  & &  &  &  &  \\
-\hspace{3mm} Male & 250 & 22.4 (15.9) & 29 (31) & -0.08 (1.11) & & 250 & 23.0 (11.0) & 34 (18) & 0.01 (1.02) \\
-\hspace{3mm} Female & 250 & 25.3 (17.9) & 35 (28) & 0.14 (1.1) & & 250 & 25.9 (15.1) & 39 (27) & 0.07 (1.1) \\
-L1 &  &  &  &  & &  &  &  &  \\
-\hspace{3mm} Spanish & 50 & 23.0 (15.7) & 32 (29) & -0.05 (1.12) & & 50 & 22.0 (8.1) & 32 (16) & 0.08 (0.94) \\
-\hspace{3mm} Marshallese & 50 & 22.9 (23.5) & 27 (32) & -0.33 (0.86) & & 50 & 20.3 (9.1) & 31 (16) & -0.15 (0.94) \\
-\hspace{3mm} Russian & 50 & 24.1 (16.3) & 33 (27) & 0.09 (0.91) & & 50 & 24.1 (8.9) & 38 (14) & 0.47 (0.86) \\
-\hspace{3mm} Vietnamese & 50 & 22.0 (14.3) & 29 (23) & 0.25 (0.99) & & 50 & 29.0 (16.4) & 41 (24) & 0.05 (0.96) \\
-\hspace{3mm} Arabic & 50 & 21.8 (11.7) & 32 (24) & 0.26 (1.01) & & 50 & 23.3 (10.6) & 36 (19) & -0.05 (0.94) \\
-\hspace{3mm} Mandarin & 50 & 25.3 (14.6) & 34 (21) & 0.86 (0.84) & & 50 & 32.5 (24.7) & 51 (44) & 0.41 (1.04) \\
-\hspace{3mm} Hindi & 50 & 26.6 (14.7) & 39 (29) & 0.55 (0.88) & & 50 & 26.9 (9.8) & 46 (18) & 0.73 (0.78) \\
-\hspace{3mm} Mayan & 50 & 17.0 (10.6) & 16 (17) & -1.24 (1.03) & & 50 & 19.6 (12.2) & 22 (17) & -0.96 (1.21) \\
-\hspace{3mm} Persian & 50 & 24.6 (15.3) & 36 (27) & -0.32 (1.1) & & 50 & 22.8 (9.9) & 31 (17) & -0.24 (1.11) \\
-\hspace{3mm} Swahili & 50 & 31.5 (25.1) & 43 (47) & 0.25 (0.97) & & 50 & 23.6 (9.6) & 38 (16) & 0.06 (0.91) \\
-    \bottomrule
+\textbf{All} & 500 & 24 (17) & 32 (29) & 0.03 (1.11) & & 500 & 24 (13) & 37 (23) & 0.04 (1.06) \\
+\textbf{Gender} &  &  &  &  & &  &  &  &  \\
+\hspace{3mm} Male & 250 & 22 (16) & 29 (31) & -0.08 (1.11) & & 250 & 23 (11) & 34 (18) & 0.01 (1.02) \\
+\hspace{3mm} Female & 250 & 25 (18) & 35 (28) & 0.14 (1.1) & & 250 & 26 (15) & 39 (27) & 0.07 (1.1) \\
+\textbf{L1} &  &  &  &  & &  &  &  &  \\
+\hspace{3mm} Spanish & 50 & 23 (16) & 32 (29) & -0.05 (1.12) & & 50 & 22 (8) & 32 (16) & 0.08 (0.94) \\
+\hspace{3mm} Marshallese & 50 & 23 (24) & 27 (32) & -0.33 (0.86) & & 50 & 20 (9) & 31 (16) & -0.15 (0.94) \\
+\hspace{3mm} Russian & 50 & 24 (16) & 33 (27) & 0.09 (0.91) & & 50 & 24 (9) & 38 (14) & 0.47 (0.86) \\
+\hspace{3mm} Vietnamese & 50 & 22 (14) & 29 (23) & 0.25 (0.99) & & 50 & 29 (16) & 41 (24) & 0.05 (0.96) \\
+\hspace{3mm} Arabic & 50 & 22 (12) & 32 (24) & 0.26 (1.01) & & 50 & 23 (11) & 36 (19) & -0.05 (0.94) \\
+\hspace{3mm} Mandarin & 50 & 25 (15) & 34 (21) & 0.86 (0.84) & & 50 & 33 (25) & 51 (44) & 0.41 (1.04) \\
+\hspace{3mm} Hindi & 50 & 27 (15) & 39 (29) & 0.55 (0.88) & & 50 & 27 (10) & 46 (18) & 0.73 (0.78) \\
+\hspace{3mm} Mayan & 50 & 17 (11) & 16 (17) & -1.24 (1.03) & & 50 & 20 (12) & 22 (17) & -0.96 (1.21) \\
+\hspace{3mm} Persian & 50 & 25 (15) & 36 (27) & -0.32 (1.1) & & 50 & 23 (10) & 31 (17) & -0.24 (1.11) \\
+\hspace{3mm} Swahili & 50 & 32 (25) & 43 (47) & 0.25 (0.97) & & 50 & 24 (10) & 38 (16) & 0.06 (0.91) \\    \bottomrule
     \end{tabular}
 %{\raggedright \newline \newline This is where authors provide additional information about the data, including whatever notes are needed. \par}
 %\caption{\label{smp_dscr} Sample descriptive statistics in aggregate ("All") and disaggregated by gender and L1.}
@@ -601,9 +614,19 @@ Note that manual transcription (and thus the computation of WER, described in th
 
 Performance (and biases) of automated transcription services were evaluated by calculating word error rate (WER), a metric commonly used for these purposes. Under the assumption that the manual transcript is true, WER is calculated as the ratio of total number of errors (in the automated transcript) to total number of words (in the manual transcript; \cite{qian2019automatic}. There are three types of errors: insertions, deletions, or substitutions. \citet[][p. 65]{qian2019automatic} gives the following hypothetical example to illustrate how WER is computed. Insertions are presented in \textbf{bold}, deletions in \strike{strikethrough} (strikethrough), and substitutions in \emph{italics}:
 
-Human transcription: This is \emph{a} sample response to \strike{a} speaking test \emph{question}.
-
-ASR output: This is \emph{the} sample response to speaking test \emph{quest} \textbf{shun}.
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:wer_example} \raggedright Example of calculating word error rate, with annotations.}
+\small  % comment out this line if wanted bigger font size
+\begin{tabular}{ll}
+	\toprule
+	Human transcription: & This is \emph{a} sample response to \strike{a} speaking test \emph{question}. \\
+	ASR output: & This is \emph{the} sample response to speaking test \emph{quest} \textbf{shun}. \\
+	\bottomrule
+    \end{tabular}
+%{\raggedright \newline \newline This is where authors provide additional information about the data, including whatever notes are needed. \par}
+%\caption{\label{smp_dscr} Sample descriptive statistics in aggregate ("All") and disaggregated by gender and L1.}
+\end{table}
 
 $$
 \frac{1 \hspace{3pt} insertion + 1 \hspace{3pt} deletion + 2 \hspace{3pt} substitutions}{10 \hspace{3pt} words \hspace{3pt} total} = .4 \hspace{3pt} or \hspace{3pt} 40\% \hspace{3pt} WER
@@ -694,20 +717,26 @@ In terms of performance, OOS BERT models nearly achieved parity with human rater
 \centering
 \caption{\label{bert_perf} \raggedright Performance of off-the-shelf BERT scoring models for items 1–3, compared to human-human agreement, with respect to accuracy, correlation ($r$), and quadratic weighted kappa (QWK)}
 \small  % comment out this line if wanted bigger font size
-\begin{tabular}{lccccccccccccc}
+\begin{tabular}{lccccccccccccccccc}
 \toprule
-    & \multicolumn{6}{c}{\textbf{Grade Band 2-3}} & \multicolumn{1}{c}{ } & \multicolumn{6}{c}{\textbf{Grade Band 9-12}} \\
-    \cline{2-7}
-    \cline{9-14}
-    & \multicolumn{2}{c}{\textbf{Acc.}} & \multicolumn{2}{c}{\textbf{r}} & \multicolumn{2}{c}{\textbf{QWK}} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{\textbf{Acc.}} & \multicolumn{2}{c}{\textbf{r}} & \multicolumn{2}{c}{\textbf{QWK}} \\
-    \textbf{Item} & \textbf{Human} & \textbf{BERT} & \textbf{Human} & \textbf{BERT} & \textbf{Human} & \textbf{BERT} & & \textbf{Human} & \textbf{BERT} & \textbf{Human} & \textbf{BERT} & \textbf{Human} & \textbf{BERT} \\
+    & \multicolumn{8}{c}{\textbf{Grade Band 2-3}} & \multicolumn{1}{c}{ } & \multicolumn{8}{c}{\textbf{Grade Band 9-12}} \\
+    \cline{2-9}
+    \cline{11-18}
+    & \multicolumn{2}{c}{\textbf{Acc.}} & & \multicolumn{2}{c}{\textbf{r}} & & \multicolumn{2}{c}{\textbf{QWK}} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{\textbf{Acc.}} & & \multicolumn{2}{c}{\textbf{r}} & & \multicolumn{2}{c}{\textbf{QWK}} \\
+\cline{2-3}
+\cline{5-6}
+\cline{8-9}
+\cline{11-12}
+\cline{14-15}
+\cline{17-18}
+    \textbf{Item} & \textbf{H} & \textbf{B} & & \textbf{H} & \textbf{B} & & \textbf{H} & \textbf{B} & & \textbf{H} & \textbf{B} & & \textbf{H} & \textbf{B} & & \textbf{H} & \textbf{B} \\
     \midrule
-    1 & .911 & .896 & .793 & .713 & .792 & .713 & & .929 & .904 & .920 & .895 & .920 & .895 \\
-    2 & .756 & .685 & .898 & .861 & .898 & .859 & & .728 & .700 & .911 & .910 & .911 & .909 \\
-    3 & .614 & .618 & .834 & .834 & .834 & .829 & & .694 & .707 & .841 & .885 & .609 & .884 \\
+1 & .911 & .896 & & .793 & .713 & & .792 & .713 & & .929 & .904 & & .920 & .895 & & .920 & .895 \\
+2 & .756 & .685 & & .898 & .861 & & .898 & .859 & & .728 & .700 & & .911 & .910 & & .911 & .909 \\
+3 & .614 & .618 & & .834 & .834 & & .834 & .829 & & .694 & .707 & & .841 & .885 & & .609 & .884 \\
     \bottomrule
     \end{tabular}
-{\raggedright \newline \newline  Note: "human" refers to human-human comparisons. The number of observations that were scored by two human raters ranges from 1,567–1641 for Grade Band 2–3, and from 1,254–1,293 for Grade Band 9–12. "BERT" refers to human-BERT comparisons. The number of observations in the testing sets were 4,185 for Grade Band 2–3, and 3,306 for Grade Band 9–12. \par}
+{\raggedright \newline \newline  Note: "H" refers to human-human comparisons (i.e. rater 2 compared to rater 1). The number of observations that were scored by two human raters ranges from 1,567–1641 for Grade Band 2–3, and from 1,254–1,293 for Grade Band 9–12. "B" refers to human-BERT comparisons (i.e. BERT compared to rater 1). The number of observations in the testing sets were 4,185 for Grade Band 2–3, and 3,306 for Grade Band 9–12. \par}
 \end{table*}
 
 \section{Study 2 Results}
@@ -1142,7 +1171,7 @@ The languages within each of the composite L1 groups are presented in Table \ref
 \begin{table*}[htbp]
 \centering
 \caption{\label{lang_grp} Languages of composite L1 groups by grade-band.}
-\small  % comment out this line if wanted bigger font size
+\scriptsize  % comment out this line if wanted bigger font size
 \begin{tabular}{lccccccc}
 \toprule
     & \multicolumn{2}{c}{\textbf{Grade Band 2-3}} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{\textbf{Grade Band 9-12}} \\
@@ -1210,6 +1239,7 @@ L2-ARCTIC is a publicly available L2 English speech corpus \cite{zhao2018l2}. Si
 
 \begin{table*}
   \caption{Descriptive statistics of ELPA21 and L2-ARCTIC datasets, with means and standard deviations (in parentheses), overall and disaggregated by gender and L1}
+  \small
   \label{tab:l2}
   \centering
   \begin{tabular}{lcccccccc}
@@ -1218,22 +1248,22 @@ L2-ARCTIC is a publicly available L2 English speech corpus \cite{zhao2018l2}. Si
     \cline{2-5}
     \cline{7-9}
     % & \textbf{n} & \textbf{Word count} & \textbf{Duration (sec.)} & \textbf{English proficiency} &  & \textbf{n} & \textbf{Word count} & \textbf{Duration (sec.)} \\ 
-    & \multicolumn{1}{p{1.2cm}}{\centering \textbf{Num. of} \\ \textbf{speakers}} & \multicolumn{1}{p{1.2cm}}{\centering \textbf{Word} \\ \textbf{count}} & \multicolumn{1}{p{1.2cm}}{\centering \textbf{Duration} \\ \textbf{(sec.)}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{English} \\ \textbf{proficiency}} &  & \multicolumn{1}{p{1.2cm}}{\centering \textbf{Num. of} \\ \textbf{speakers}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Word} \\ \textbf{count}} & \multicolumn{1}{p{1.5cm}}{\centering \textbf{Duration} \\ \textbf{(sec.)}} \\
+    & \multicolumn{1}{p{1cm}}{\centering \textbf{} \\ \textbf{n}} & \multicolumn{1}{p{1.1cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} & \multicolumn{1}{p{1.1cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} & \multicolumn{1}{p{1.25cm}}{\centering \textbf{Avg.} \\ \textbf{Proficiency}} &  & \multicolumn{1}{p{1cm}}{\centering \textbf{} \\ \textbf{n}} & \multicolumn{1}{p{1.1cm}}{\centering \textbf{Avg.} \\ \textbf{Words}} & \multicolumn{1}{p{1.1cm}}{\centering \textbf{Avg.} \\ \textbf{Seconds}} \\
     \midrule
-Overall & 1000 & 34 (27) & 24 (15) & 0.04 (1.09) & & 24 & 9940 (356) & 4061 (518) \\
-L1 &  &  &  &  & &  &  &  \\
+\textbf{All} & 1000 & 34 (27) & 24 (15) & 0.04 (1.09) & & 24 & 9940 (356) & 4061 (518) \\
+\textbf{L1} &  &  &  &  & &  &  &  \\
 \hspace{3mm} Vietnamese & 100 & 35 (24) & 26 (16) & 0.15 (0.97) & & 4 & 10052 (1) & 4320 (280) \\
-\hspace{3mm} Mayan Lngs. & 100 & 19 (17) & 18 (12) & -1.10 (1.13) & & -- & -- & -- \\
+\hspace{3mm} Mayan & 100 & 19 (17) & 18 (12) & -1.10 (1.13) & & -- & -- & -- \\
 \hspace{3mm} Mandarin & 100 & 42 (35) & 29 (21) & 0.63 (0.97) & & 4 & 10038 (13) & 4309 (322) \\
 \hspace{3mm} Persian & 100 & 43 (25) & 27 (13) & 0.64 (0.83) & & -- & -- & -- \\
 \hspace{3mm} Spanish & 100 & 32 (24) & 23 (12) & 0.01 (1.03) & & 4 & 9767 (557) & 4221 (649) \\
 \hspace{3mm} Russian & 100 & 35 (22) & 24 (13) & 0.28 (0.90) & & -- & -- & -- \\
 \hspace{3mm} Marshallese & 100 & 29 (25) & 22 (18) & -0.24 (0.90) & & -- & -- & -- \\
-\hspace{3mm} Niger-Congo Lngs. & 100 & 40 (35) & 28 (19) & 0.16 (0.94) & & -- & -- & -- \\
+\hspace{3mm} Swahili & 100 & 40 (35) & 28 (19) & 0.16 (0.94) & & -- & -- & -- \\
 \hspace{3mm} Korean & -- & -- & -- & -- & & 4 & 10049 (4) & 4092 (502) \\
 \hspace{3mm} Hindi & 100 & 34 (22) & 24 (13) & -0.28 (1.10) & & 4 & 10046 (4) & 3477 (334) \\
 \hspace{3mm} Arabic & 100 & 34 (22) & 23 (11) & 0.10 (0.98) & & 4 & 9689 (692) & 3947 (641) \\
-Gender &  &  &  &  & &  &  &  \\
+\textbf{Gender} &  &  &  &  & &  &  &  \\
 \hspace{3mm} Male & 500 & 32 (25) & 23 (14) & -0.03 (1.07) & & 12 & 9950 (321) & 4178 (410) \\
 \hspace{3mm} Female & 500 & 37 (28) & 26 (17) & 0.11 (1.10) & & 12 & 9930 (403) & 3944 (603) \\
 \bottomrule
