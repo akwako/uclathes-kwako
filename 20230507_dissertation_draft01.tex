@@ -61,9 +61,9 @@ I would like to express my deepest gratitude and appreciation to all those who h
 
 My thanks go out to all the members of my dissertation committee. To Mark Hansen, for encouraging me to apply for the Transdisciplinary Research Acceleration Grant, for his belief in and guidance throughout this project, and for providing thoughtful and insightful feedback at every step of the way. To Li Cai, for always being available for a statistical consult, and for sharing the breadth of his expertise and wisdom about language assessment. To Kai-Wei Chang, for his commitment to sharing his knowledge of Natural Language Processing with others outside of the Computer Science department, for embarking on this interdisciplinary project, and for generously sharing his resources with us in Education. 
 
-I would also like to extend my appreciation to John Rogers, for being a role model of great leadership looks like, and for showing me how scholarship can make an impact in the world. And thanks to Bill Sandoval, who introduced me to educational research, and who welcomed me on his team in my most formative years at UCLA. 
+I would also like to extend my appreciation to John Rogers, for being a role model of what great leadership looks like, and for showing me how scholarship can make an impact in the world. And my thanks to Bill Sandoval, who introduced me to educational research, and who welcomed me onto his team in my most formative years at UCLA. 
 
-My deepest gratitude goes out to my family and my partner. To my mom, for her commitment to my education, for her unconditional love and support, and for cultivating my intellectual curiosity and openness to new ideas. To my dad, for his calm support, and his veneration for serious thinking. To my brother, for teaching me the power of tenacity, and for being a vigilant friend inside science and math and beyond. And of course to my partner, Kathryn, to whom I owe my present happiness, who taught me that I could love writing and thinking as an academic, whose curiosity and ways of thinking are an endless source of inspiration. 
+My deepest gratitude goes out to my family and my partner. To my mom, for her commitment to my education, for her unconditional love and support, and for cultivating my intellectual curiosity and openness to new ideas. To my dad, for his calm support, and his veneration for serious thinking. To my brother, for teaching me the power of tenacity, for being a vigilant friend, and for renewing my interest in math and beyond. And of course to my partner, Kathryn, to whom I owe my present happiness, who taught me that I could love writing and thinking as an academic, whose curiosity and ways of thinking are an endless source of inspiration. 
 
 To all those who have supported me that I have failed to mention, I offer my sincere appreciation. Your contributions, both big and small, have played a significant role in the completion of this dissertation. Thank you for being a part of this transformative experience. 
 }
@@ -94,7 +94,7 @@ To all those who have supported me that I have failed to mention, I offer my sin
 		Developed proposal to study the use of debiasing techniques in automated English speaking assesment.}
 \vitaitem   {2022--2023}
                 {Dissertation Year Fellowship, UCLA.
-		Continued study of measurement and mitigation of bias in automated English speaking assessment.}
+		For the study of measurement and mitigation of bias in automated English speaking assessment.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -161,7 +161,7 @@ Automated systems, in contrast to human raters, are not prone to the same kind o
 
 While not prone to the same sorts of errors as human raters, automated systems can still be biased. However, there are methods for identifying and mitigating such biases in NLP-based applications. \citet{zhao2018gender}, for example, have shown how it is possible to debias an NLP-based application that resolves coreferences (e.g., identifying subjects of sentences when pronouns are ambiguous). Originally, the application was more likely to ascribe historically male professions (such as politician or doctor) to male subjects; however, after supplementing the corpus with less biased data, the model became more gender-neutral in its coreference resolutions. Whether social biases are present in humans or in automated systems, they can be measured and mitigated with careful planning and engineering.
 
-\section{Bias and debiasing}
+\section{Examples of bias and debiasing}
 
 There is little research on bias in automated testing of English speaking proficiency. In order to illustrate what sorts of problems might occur with these systems, I consider two hypothetical examples of how biases might become embedded in automated English language assessment systems, and how bias reduction techniques could be used to address them.
 
@@ -249,11 +249,11 @@ The scoring model combines linguistic features to produce a summative language p
 
 TOEFL uses linear regression, wherein features are weighted and selected using a LASSO-based method \citep{loukina2015feature}. The primary rationale for using linear regression is that it is relatively transparent and easy to communicate; \citet{loukina2019scoring} report that ETS has experimented with more complex scoring models, e.g., random forests, but they were not worth the 2-3\% improvement in accuracy. \citet{zechner2019summary} reports that, at the item-level, their scoring model is more reliable than human-human reliability coefficients ($r$ = 0.65, compared to $r$ = 0.55-0.60). In contrast to TOEFL, AZELLA combines features using a deep learning model with a single layer of latent variables \citep{cheng2014automatic}.
 
+\section{Bias in English speaking assessments}
+
 \subsection{Issues of fairness in automated speaking assessment}
 
 During the course of test development, it is standard practice for a bias review committee to screen all items for inappropriate or content-irrelevant material, and to analyze items for differential item functioning (DIF) to ensure quantitatively that items are not biased against any particularly groups of examinees, e.g., women or racial minorities \citep{aera2014}. It is likely that DIF analyses were conducted by Pearson and ETS for speaking items scored by human ratings, but it is not clear whether they were repeated for automated scoring systems. Given that Versant (Pearson’s ASR system for TELPAS) was not originally designed to assess K-12 students, and some evidence of inconsistency among examinees’ scores \citep{collier2020test}, it is troubling such analyses have not been made public (or, possibly, even conducted).
-
-\section{Bias in English speaking assessments}
 
 \subsection{Impact of gender and L1}
 
@@ -298,7 +298,7 @@ Research on implicit bias and speech suggests that, in the context of English la
 
 There are many socio-cultural differences based on gender and L1 that affect English speaking assessment. \citet{derwing2013development}, for instance, discuss how factors like age and conversational opportunities interact with L1 in complex ways. Gender is also a source of variation in L2 English speaking proficiency, although it varies by culture and task \citep{denies2022mapping}. 
 
-There may also be cultural differences that interact with item properties. Now a classic example, Freedle (2003) describes how verbal items draw on cultural knowledge that disadvantage minority examinees. It is possible that certain speaking items may require an understanding of the context of schooling in the U.S.; students of some racial backgrounds may be more familiar with these practices than others. 
+There may also be cultural differences that interact with item properties. Now a classic example, \citet{freedle2003correcting} describes how verbal items draw on cultural knowledge that disadvantage minority examinees. It is possible that certain speaking items may require an understanding of the context of schooling in the U.S.; students of some racial backgrounds may be more familiar with these practices than others. 
 
 \noindent \textbf{Feature bias} \;
 
@@ -314,7 +314,7 @@ In section \ref{lit_ml_bias}, I consider in greater detail how these sources of 
 
 \noindent \textbf{Other biases} \;
 
-Although there are too many potential sources of DIF to review in full, I highlight several miscellaneous sources of DIF that bear on the inquiry of L2 English speaking assessment. \citet{huang2016exploring} report that curricula vary across countries, and that these differences are a likely source of DIF in international assessment. In another vein, it has been suggested that easier items might be more likely to exhibit DIF \citep{santelices2010unfair}, and guessing behavior, which is related to overall proficiency, may also be a source of DIF \citep{dorans2004examining}. 
+Although there are too many potential sources of DIF to review in full, I highlight several miscellaneous sources of DIF that bear on the inquiry of L2 English speaking assessment. \citet{huang2016exploring} report that curricula vary across countries, and that these differences are a likely source of DIF in international assessment. This source of bias would be related to the age at which examinees emigrated and entered into the U.S. schooling system. In another vein, it has been suggested that easier items might be more likely to exhibit DIF \citep{santelices2010unfair}, and guessing behavior, which is related to overall proficiency, may also be a source of DIF \citep{dorans2004examining}. Given that speaking is a difficult aspect of L2 language acquisition \citep{brown2000principles}, it is possible that examinees who are less fluent are able to guess their way through non-speaking items, but struggle with speaking items.
 
 \section{Language modeling}
 
@@ -454,7 +454,7 @@ Automated transcripts were generated using Amazon Web Services. Transcript reque
 
 Text was standardized in order to remove certain stylistic differences between automated transcription services. Following the example of \cite{koenecke2020}, standardization included: changing numerals to unhyphenated words (e.g. “forty two” instead of “42”); removing punctuation, with the exception of apostrophes and translatable symbols (e.g. “percent” instead of “\%”); removing expressions of hesitation (such as “um” or “hm”); converting all text to lowercase; and formalizing slang (e.g. replacing “cuz” with “because”).
 
-\subsection{Non-speaking English Proficiency}
+\subsection{Non-speaking English proficiency}
 \label{meth_nonspeaking}
 
 Examinees' non-speaking English proficiency was used as the matching criterion in DIF analyses (see Section \ref {meth_dif}). Non-speaking proficiency was inferred from examinees' responses to test items in non-speaking domains (i.e. listening, reading, and writing). Items were modeled using an Item Response Theory (IRT) framework \citep{cai_item_2016}, consistent with modeling choices used in production. One difference, however, was that we modeled non-speaking items as a unidimensional construct because (1) it simplified interpretation of the matching criterion, since we were interested in non-speaking proficiency as a whole rather than individual domains, (2) it yielded smaller margins of error, and (3) model fit was in an acceptable range for both grade bands, based on limited-information fit statistics and Tucker-Lewis (non-normed) fit indices (M2 RMSEA $\leq .03$ and M2 TLI $\geq .96$). 
@@ -657,7 +657,6 @@ Figure \ref{wer_aws} presents the estimated WER for Amazon’s automated transcr
 {Note: Overall WER appear in black, and disaggregated WER appear in gold (gender) and blue (L1); whiskers indicate 95\% confidence intervals; brackets with asterisks indicate statistically significant pairwise comparisons. \par}
 \end{figure}
 
-
 \subsection{Gender biases}
 
 With respect to gender, results show no statistically significant differences between male and female WERs. Note that, while female speakers tended to have lower WERs, these differences were statistically significant using B-H adjusted p-values.
@@ -672,7 +671,7 @@ There were also differences in WER based on speakers' grade band. Although it do
 
 The WER of children (grades 2-3) were found to be significantly higher than WERs of young adults (grades 9-12). For Amazon, WERs were 20.5\% [18.8\%, 22.2\%] and 16.5\% [15.0\%, 18.0\%].
 
-\subsection{Other services and dataset}
+\subsection{Differences across services and datasets}
 
 Although not the focus of Study 1, I compared WER across automated transcription service (Appendix \ref{sec:appendix_wer}), and repeated analyses on a public dataset (Appendix \ref{sec:appendix_l2}). These additional analyses provide evidence that the results of Study 1 are robust. In particular, speakers of Vietnamese L1 backgrounds have higher WERs in L2-ARCTIC data, and across all three automated transcription services. Arabic speakers, however, do not have a lower WER for L2-ARCTIC, and the difference is not as extreme for Microsoft and Google as it is for Amazon. 
 
@@ -1232,7 +1231,7 @@ Trends are similar across the three services. In particular, older examinees' wi
 
 Automated transcripts were generated from October 7-12, 2022 (for Google and Amazon) and from November 12-13, 2022 (for Microsoft). Transcript requests were sent using Microsoft, Amazon, and Google APIs for Python 3.8.12 \cite{python2022}. Default settings were used for all services. Output language code was set to "en-US" for all three providers. Microsoft required several additional settings: The profanity filter was set to "None", and punctuation mode was set to "Automatic". Microsoft and Amazon provided multiple transcripts by default; in both cases, the most probable transcript was selected for analyses. 
 
-\section{Comparison of WER across three automated transcription services}
+\section{Comparison of WER across datasets}
 \label{sec:appendix_l2}
 
 L2-ARCTIC is a publicly available L2 English speech corpus \cite{zhao2018l2}. Similar to the subsample of ELPA21, subjects in L2-ARCTIC were sampled so as to be balanced in terms of gender and L1. Descriptive statistics of the L2-ARCTIC, alongside ELPA21, are presented in Table \ref{tab:l2}. L2-ARCTIC includes a total of 27.1 hours of speech from 24 adults across 6 different L1 (Table \ref{tab:l2}). L2-ARCTIC is comprised of scripted speech: Speakers were asked to read the ARCTIC prompts, a selection of out-of-copyright text curated to be phonetically balanced \cite{kominek2003}. 
